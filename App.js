@@ -1,4 +1,5 @@
-
+import React from 'react';
+import ReactDOM from 'react-dom/client'
 // Hello World! print in RecatJS
 // const parent = React.createElement(
 //     "h1", {}, "Hello world in ReactJS"
