@@ -21,16 +21,38 @@ import ReactDOM from 'react-dom/client'
     </div>
 </div> */}
 
-const parent = React.createElement('div', {id: 'parent'}, [
-    React.createElement('div', {id: 'child1'},[
-        React.createElement('h1',{}, 'This is Child 1 Tag'),
-        React.createElement('h1', {}, 'How are you')
-    ]),
-    React.createElement('div', {id: 'child2'},[
-        React.createElement('h1',{}, 'This is Child 2 Tag'),
-        React.createElement('h1', {}, 'Im fine and you')
-    ])
-])
+// const parent = React.createElement('div', {id: 'parent'}, [
+//     React.createElement('div', {id: 'child1'},[
+//         React.createElement('h1',{}, 'This is Child 1 Tag'),
+//         React.createElement('h1', {}, 'How are you')
+//     ]),
+//     React.createElement('div', {id: 'child2'},[
+//         React.createElement('h1',{}, 'This is Child 2 Tag'),
+//         React.createElement('h1', {}, 'Im fine and you')
+//     ])
+// ])
+
+//Instead of above code using JSX bcz jsx is easy to understand
+
+//JSX => React.createElement => createElement - js object => HTMLElement(render)
+
+//React Element using JSX
+// const heading =  (<h1 className='head' tabIndex= '5'>
+//     Namste ReactJS using JSX 🚀</h1>
+//     );
+
+// Functional Component
+const Title = () => (<h1 className='head' tabIndex= '5'>
+    Namste ReactJS using JSX 🚀</h1>
+    );
+
+//React Functional component
+const HeadingComponent = () => (
+    <div className='container'>
+        <Title />
+        <h1 className='heading'>Namaste React Functional Component</h1>
+    </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent);
+root.render(<HeadingComponent />);
